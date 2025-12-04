@@ -141,10 +141,6 @@ else:
 
     st.markdown("---")
 
-    # 전체 JSON으로도 출력
-    st.subheader("🧠 전체 성향 데이터 (디버깅/분석용)")
-    st.json(scores)
-
     # 다시 테스트 버튼
     if st.button("🔄 다시 테스트하기"):
         random.shuffle(st.session_state.questions)
@@ -152,3 +148,4 @@ else:
         st.session_state.q_index = 0
         st.session_state.finished = False
         st.rerun()
+
